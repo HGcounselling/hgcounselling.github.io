@@ -25,6 +25,7 @@ body > div {
 	padding:0 1rem;
 }
 a:link, a:hover, a:visited {color:#ff4b5b;}
+header a:link, header a:hover, header a:visited {color:inherit;}
 header nav {margin:30px 0;}
 nav a:link, nav a:visited, nav a:hover {
 	color:#000;
@@ -69,6 +70,7 @@ h5 {
 	font-size: 1.1rem;
 	margin:1.6rem 0 1.6rem
 }
+br {display:none;}
 p, ul {margin:0 0 1.6rem;}
 article {margin:0 0 150px;}
 section {margin:150px 0 0;}
@@ -112,17 +114,22 @@ a.mail {
 }
 @media only screen and (max-width:600px){
 	body {background-position:-450px 0;}
-	header, footer, nav ul, section nav ul {display:block;}
+	header, footer, nav ul, section nav ul, br {
+		display:block;
+		margin:0;
+	}
 	header nav ul {display:none;}
 	header {margin-bottom:0;}
 	h1 {font-size:2.8rem;}
 	h2 {font-size:1.9rem;}
 	#home {margin-top:50px;}
 	nav li {padding:0 0 10px;}
-	section img {
+	section#home img {
 		float:none;
 		margin:0 auto 1rem;
 		display:block;
 		padding:0;
-}
+	}
+	section#about-me {background:none;}
+	section#about-me img {height:96px;}
 }
